@@ -1,0 +1,12 @@
+{
+  "taco": {
+    "word": "json",
+    "language": "JS",
+    "definition": "JavaScript Object Notation"
+  },
+  "burrito": {
+    "word": "CSS",
+    "language": "CSS",
+    "definition": "Cascading Stylesheet"
+  }
+}
