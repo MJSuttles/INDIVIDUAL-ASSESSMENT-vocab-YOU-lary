@@ -24,7 +24,7 @@ const formEvents = () => {
     }
 
     // CLICK EVENT FOR EDITING A CARD
-    if (e.target.id.includes('update-card')) {
+    if (e.target.id.includes('update-vocab')) {
       const payload = {
         word: document.querySelector('#vocabWord').value,
         language: document.querySelector('#language').value,
