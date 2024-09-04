@@ -9,16 +9,12 @@ const emptyCards = () => {
 const showCards = (array) => {
   clearDom();
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-author-btn">Add An Author</button>';
-
-  renderToDOM('#add-button', btnString);
-
   let domString = '';
   array.forEach((item) => {
     domString += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h3 class="card-title">${item.vocabWord} ${item.vocabWord}</h3>
+        <h3 class="card-title">${item.word}</h3>
         <h3 class="card-subtitle mb-2 text-muted">${item.language}</h3>
         <h3 class="card-subtitle mb-2 text-muted">${item.definition}</h3>
         <hr>

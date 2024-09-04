@@ -10,6 +10,7 @@ const formEvents = () => {
       const payload = {
         word: document.querySelector('#vocabWord').value,
         language: document.querySelector('#language').value,
+        definition: document.querySelector('#definition').value,
         uid: `${firebase.auth().currentUser.uid}`
       };
 
@@ -22,11 +23,12 @@ const formEvents = () => {
       });
     }
 
-    // CLICK EVENT FOR EDITING A BOOK
+    // CLICK EVENT FOR EDITING A CARD
     if (e.target.id.includes('update-card')) {
       const payload = {
         word: document.querySelector('#vocabWord').value,
         language: document.querySelector('#language').value,
+        definition: document.querySelector('#definition').value,
         uid: `${firebase.auth().currentUser.uid}`
       };
 
