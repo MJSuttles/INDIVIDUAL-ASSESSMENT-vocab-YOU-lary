@@ -20,7 +20,7 @@ const navigationEvents = () => {
     addVocabForm();
   });
 
-  document.querySelector('#authors').addEventListener('click', () => {
+  document.querySelector('#allCards').addEventListener('click', () => {
     getCards(`${firebase.auth().currentUser.uid}`).then((cards) => {
       if (cards.length === 0) {
         emptyCards();
