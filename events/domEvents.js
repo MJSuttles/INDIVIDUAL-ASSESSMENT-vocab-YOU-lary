@@ -1,12 +1,26 @@
 import firebase from 'firebase';
 import addVocabForm from '../forms/vocabForm';
-import { getSingleCard } from '../api/vocabData';
+import { getSingleCard, deleteSingleCard, getCards } from '../api/vocabData';
+import { showCards } from '../pages/vocab';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     // CLICK EVENT FOR ADDING CARD
     if (e.target.id.includes('add-vocab-btn')) {
       addVocabForm(`${firebase.auth().currentUser.uid}`);
+    }
+
+    // CLICK EVENT FOR DELETING A CARD
+    if (e.target.id.includes('delete-card-btn')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Want to delete?')) {
+        console.warn('CLICKED DELETE BOOK', e.target.id);
+        const [, firebaseKey] = e.target.split('--');
+
+        deleteSingleCard(firebaseKey).then(() => {
+          getCards(`${firebase.auth().currentUser.uid}`).then(showCards);
+        });
+      }
     }
 
     // ADD CLICK EVENT FOR EDITING A CARD
