@@ -11,7 +11,7 @@ const navBar = () => {
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+              <a class="nav-link" href="#" id="allCards">Show All</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="createEntry">Create Entry</a>
