@@ -1,4 +1,4 @@
-import logoutButton from '../components/loginButton';
+import logoutButton from '../components/logoutButton';
 import domBuilder from '../shared/domBuilder';
 import formEvents from '../events/formEvents';
 import domEvents from '../events/domEvents';

@@ -13,10 +13,10 @@ const addVocabForm = (obj = {}) => {
         <label for="image">Definition</label>
         <input type="text" class="form-control" id="definition" placeholder="Definition" required>
       </div>
-      <div class="form-group">
-        <label for="image">Language</label>
-        <input type="text" class="form-control" id="language" placeholder="JavaScript, Python, Ruby, etc." required>
-      </div>
+     <div class="form-group">
+      <label for="image">Language</label>
+      <input type="text" class="form-control" id="language" placeholder="JavaScript, Python, Ruby, etc." required>
+     </div>
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>`;
 

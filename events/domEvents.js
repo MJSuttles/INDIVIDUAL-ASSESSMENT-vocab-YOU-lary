@@ -1,6 +1,8 @@
 import firebase from 'firebase';
 import addVocabForm from '../forms/vocabForm';
-import { getSingleCard, deleteSingleCard, getCards } from '../api/vocabData';
+import {
+  getSingleCard, deleteSingleCard, getCards
+} from '../api/vocabData';
 import { showCards } from '../pages/vocab';
 
 const domEvents = () => {
@@ -14,8 +16,8 @@ const domEvents = () => {
     if (e.target.id.includes('delete-card-btn')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
-        console.warn('CLICKED DELETE BOOK', e.target.id);
-        const [, firebaseKey] = e.target.split('--');
+        console.warn('CLICKED DELETE CARD', e.target.id);
+        const [, firebaseKey] = e.target.id.split('--');
 
         deleteSingleCard(firebaseKey).then(() => {
           getCards(`${firebase.auth().currentUser.uid}`).then(showCards);
