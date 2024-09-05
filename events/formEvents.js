@@ -1,5 +1,7 @@
 import firebase from 'firebase';
-import { createCard, getCards, updateCard } from '../api/vocabData';
+import {
+  createCard, getCards, updateCard,
+} from '../api/vocabData';
 import { showCards } from '../pages/vocab';
 
 const formEvents = () => {
