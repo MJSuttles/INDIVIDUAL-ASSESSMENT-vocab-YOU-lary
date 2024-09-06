@@ -13,17 +13,16 @@ const addVocabForm = (obj = {}) => {
         <label for="image">Definition</label>
         <input type="text" class="form-control" id="definition" placeholder="Definition" required>
       </div>
-      <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Language/Tech
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-         <a class="dropdown-item" href="#">HTML</a>
-          <a class="dropdown-item" href="#">CSS</a>
-          <a class="dropdown-item" href="#">JavaScript</a>
-        </div>
-      </div>
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>`;
 
