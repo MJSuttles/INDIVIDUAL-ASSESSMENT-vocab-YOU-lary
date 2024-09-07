@@ -13,7 +13,8 @@ const formEvents = () => {
         word: document.querySelector('#vocabWord').value,
         language: document.querySelector('#language').value,
         definition: document.querySelector('#definition').value,
-        uid: `${firebase.auth().currentUser.uid}`
+        uid: `${firebase.auth().currentUser.uid}`,
+        time: Date.now()
       };
 
       createCard(payload).then(({ name }) => {
