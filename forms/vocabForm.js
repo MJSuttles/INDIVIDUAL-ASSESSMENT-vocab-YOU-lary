@@ -14,15 +14,15 @@ const addVocabForm = (obj = {}) => {
         <input type="text" class="form-control" id="definition" placeholder="Definition" required>
       </div>
       <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Language/Tech
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">HTML</a></li>
-    <li><a class="dropdown-item" href="#">CSS</a></li>
-    <li><a class="dropdown-item" href="#">JavaScript</a></li>
-  </ul>
-</div>
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Language/Tech
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">HTML</a></li>
+          <li><a id="language" class="dropdown-item" href="#">CSS</a></li>
+          <li><a class="dropdown-item" href="#">JavaScript</a></li>
+        </ul>
+      </div>
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
     </form>`;
 
