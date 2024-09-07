@@ -1,10 +1,8 @@
 import firebase from 'firebase';
 import { signOut } from '../utils/auth';
-import { getCards } from '../api/vocabData';
+import { getCards, cardsByLanguage } from '../api/vocabData';
 import { showCards, emptyCards } from '../pages/vocab';
 import addVocabForm from '../forms/vocabForm';
-// import { showLanguages, emptyLanguages } from '../pages/languages';
-// import addLanguageForm from '../forms/LanguageForm';
 
 const navigationEvents = () => {
   // LOGOUT BUTTON
@@ -18,10 +16,12 @@ const navigationEvents = () => {
     addVocabForm();
   });
 
-  // document.querySelector('#createLanguage').addEventListener('click', () => {
-  //   addLanguageForm();
-  // });
+  // CARDS BY LANGUAGE
+  document.querySelector('#allLanguages').addEventListener('click', () => {
+    cardsByLanguage(`${firebase.auth().currentUser.uid}`).then(showCards);
+  });
 
+  // DELETE CARD
   console.warn("I'm about to listen to #allCards");
   document.querySelector('#allCards').addEventListener('click', () => {
     getCards(`${firebase.auth().currentUser.uid}`).then((cards) => {

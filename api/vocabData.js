@@ -54,6 +54,21 @@ const deleteSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const cardsByLanguage = (language, uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="language"&equalTo="${language}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const filteredData = Object.values(data).filter((card) => card.uid === uid);
+      resolve(filteredData);
+    })
+    .catch(reject);
+});
+
 // UPDATE CARD
 const updateCard = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/vocab/${payload.firebaseKey}.json`, {
@@ -88,4 +103,5 @@ export {
   getSingleCard,
   deleteSingleCard,
   getLanguages,
+  cardsByLanguage
 };
