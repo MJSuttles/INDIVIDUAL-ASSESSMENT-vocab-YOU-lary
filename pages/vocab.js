@@ -2,7 +2,7 @@ import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
 const emptyCards = () => {
-  const domString = '<h1>No Authors</h1>';
+  const domString = '<h1>No Cards</h1>';
   renderToDOM('#store', domString);
 };
 
