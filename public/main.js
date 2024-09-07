@@ -10,7 +10,6 @@ const init = () => {
     <button class="btn btn-danger" id="click-me">Click ME!</button><br />
     <hr />
   `;
-  console.warn('YOU ARE UP AND RUNNING!');
 
   document
     .querySelector('#click-me')

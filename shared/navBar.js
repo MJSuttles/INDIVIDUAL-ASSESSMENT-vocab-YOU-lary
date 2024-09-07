@@ -14,7 +14,13 @@ const navBar = () => {
               <a class="nav-link" href="#" id="allCards">Show All Vocab Cards</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="allLanguages">Show Cards by Language</a>
+              <a class="nav-link" href="#" id="HTMLButton">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="CSSButton">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="JavaScriptButton">JavaScript</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" id="createEntry">Create Entry</a>

@@ -54,8 +54,9 @@ const deleteSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const cardsByLanguage = (language, uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocab.json?orderBy="language"&equalTo="${language}"`, {
+// HTML CARDS
+const cardsByHTML = (language, uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -63,8 +64,55 @@ const cardsByLanguage = (language, uid) => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const filteredData = Object.values(data).filter((card) => card.uid === uid);
-      resolve(filteredData);
+      const HTMLLang = Object.values(data).filter((item) => item.language === 'HTML');
+      console.warn(HTMLLang);
+      if (data) {
+        resolve(HTMLLang);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+// CSS CARDS
+const cardsByCSS = (language, uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const CSSLang = Object.values(data).filter((item) => item.language === 'CSS');
+      console.warn(CSSLang);
+      if (data) {
+        resolve(CSSLang);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+// JAVASCRIPT CARDS
+const cardsByJavaScript = (language, uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const jsLang = Object.values(data).filter((item) => item.language === 'JavaScript');
+      console.warn(jsLang);
+      if (data) {
+        resolve(jsLang);
+      } else {
+        resolve([]);
+      }
     })
     .catch(reject);
 });
@@ -103,5 +151,7 @@ export {
   getSingleCard,
   deleteSingleCard,
   getLanguages,
-  cardsByLanguage
+  cardsByHTML,
+  cardsByCSS,
+  cardsByJavaScript
 };

@@ -2,7 +2,7 @@
 
 Name of the Project: INDIVIDUAL-ASSESSMENT-vocab-YOU-lary
 
-Overview of the project: This website shows a pre-existing array of the Wizarding World of Harry Potter students. The website visitor can enter his/her name and then hit submit to be randomly sorted into a Harry Potter house (Gryffindor, Hufflepuff, Ravenclaw, or Slytherin). They will then see their name on a new student card among the existing students. The user can then either delete any of the students (incluind himself/herself) or expel them into Voldemort's Army.
+Overview of the project: This website will allow a users, after logging-in via Google Authentication, to create their own customized technology-oriented vocabulary cards by clicking on the "Create Entry" option in the top navigation bar. Once created, the new card will display on the screen. They will then be able to click on "Show Cards by Language" to see their cards sorted by language/tech. They will also be able to make changes to and delete any of their cards.
 
 Link to your wireframes/prototype: N/A
 
