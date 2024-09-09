@@ -8,3 +8,29 @@ body {
   text-align: center;
   margin-top: 100px;
 }
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 100px;
+  align-content: center;
+}
+
+#store {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  gap: 10px;
+  }
+
+#definition {
+  margin-bottom: 25px;
+}
+
+#wordLabel, #definitionLabel {
+  font-weight: bold;
+}
