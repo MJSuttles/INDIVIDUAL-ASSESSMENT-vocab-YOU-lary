@@ -6,11 +6,11 @@ const addVocabForm = (obj = {}) => {
   const domString = `
    <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
       <div class="form-group">
-        <label for="image">Word</label>
+        <label for="image" id="wordLabel">Word</label>
         <input type="text" class="form-control" id="vocabWord" placeholder="Word you want defined" required>
       </div>
       <div class="form-group">
-        <label for="image">Definition</label>
+        <label for="image" id="definitionLabel">Definition</label>
         <input type="text" class="form-control" id="definition" placeholder="Definition" required>
       </div>
       <div class="form-floating mb-3">

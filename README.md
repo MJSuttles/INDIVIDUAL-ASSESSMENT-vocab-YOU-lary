@@ -4,17 +4,17 @@ Name of the Project: INDIVIDUAL-ASSESSMENT-vocab-YOU-lary
 
 Overview of the project: This website will allow a users, after logging-in via Google Authentication, to create their own customized technology-oriented vocabulary cards by clicking on the "Create Entry" option in the top navigation bar. Once created, the new card will display on the screen. They will then be able to click on "Show Cards by Language" to see their cards sorted by language/tech. They will also be able to make changes to and delete any of their cards.
 
-Link to your wireframes/prototype: N/A
+Link to your wireframes/prototype: ![alt text](image.png)
 
-Link/screenshot of data flowchart: N/A
+Link/screenshot of data flowchart: ![alt text](image-1.png)
 
 Link to the deployed project (will learn later): https://rolltidedad-vocab-you-lary.netlify.app/
 
-Link to your project board (yes...even though it is a part of the repo): ?
+Link to your project board (yes...even though it is a part of the repo): I didn't use projects, but I created issues and milestones: https://github.com/MJSuttles/INDIVIDUAL-ASSESSMENT-vocab-YOU-lary/issues
 
-Description of the user and the problem you are solving for them:
+Description of the user and the problem you are solving for them: The user is anyone who'd like to add an online database of technical vocabulary cards.
 
-Screenshots of your project:
+Screenshots of your project: N/A
 
 List of contributors and links to their GH profiles:
 
