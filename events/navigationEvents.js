@@ -12,9 +12,14 @@ const navigationEvents = () => {
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
-  // ALL CARDS
+  // CREATE ENTRY BUTTON
   document.querySelector('#createEntry').addEventListener('click', () => {
     addVocabForm();
+  });
+
+  // ALL CARDS
+  document.querySelector('#allCards').addEventListener('click', () => {
+    getCards(`${firebase.auth().currentUser.uid}`).then(showCards);
   });
 
   // CARDS BY HTML
