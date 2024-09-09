@@ -12,6 +12,13 @@ const domEvents = () => {
       addVocabForm(`${firebase.auth().currentUser.uid}`);
     }
 
+    // // CLICK EVENT FOR VIEWING INDIVIDUAL CARD
+    // if (e.target.id.includes('view-card-btn')) {
+    //   const [, firebaseKey] = e.target.id.split('--');
+
+    //   getSingleCard(firebaseKey).then(showCards);
+    // }
+
     // CLICK EVENT FOR DELETING A CARD
     if (e.target.id.includes('delete-card-btn')) {
       // eslint-disable-next-line no-alert
