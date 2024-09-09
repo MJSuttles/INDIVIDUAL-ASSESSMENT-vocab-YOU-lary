@@ -16,9 +16,9 @@ const addVocabForm = (obj = {}) => {
       <div class="form-floating mb-3">
         <select class="form-select" id="language" aria-label="Default select example" required>
           <label>Language/Tech</label>
-          <option value="HTML">HTML</option>
-          <option value="CSS">CSS</option>
-          <option value="JavaScript">JavaScript</option>
+          <option value="HTML">HTML (Text Only - No Special Characters)</option>
+          <option value="CSS">CSS (Text Only - No Special Characters)</option>
+          <option value="JavaScript">JavaScript (Text Only - No Special Characters)</option>
         </select>
       </div>
       <button type="submit" class="btn btn-primary mt-3">Submit</button>
