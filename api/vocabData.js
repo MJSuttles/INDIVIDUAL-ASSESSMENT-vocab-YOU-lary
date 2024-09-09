@@ -55,65 +55,41 @@ const deleteSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 // HTML CARDS
-const cardsByHTML = (language, uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
+const cardsByHTML = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="language"&equalTo="HTML"&uid="${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-      const HTMLLang = Object.values(data).filter((item) => item.language === 'HTML');
-      console.warn(HTMLLang);
-      if (data) {
-        resolve(HTMLLang);
-      } else {
-        resolve([]);
-      }
-    })
+    .then((data) => resolve(Object.values(data)))
     .catch(reject);
 });
 
 // CSS CARDS
-const cardsByCSS = (language, uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
+const cardsByCSS = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="language"&equalTo="CSS"&uid="${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-      const CSSLang = Object.values(data).filter((item) => item.language === 'CSS');
-      console.warn(CSSLang);
-      if (data) {
-        resolve(CSSLang);
-      } else {
-        resolve([]);
-      }
-    })
+    .then((data) => resolve(Object.values(data)))
     .catch(reject);
 });
 
 // JAVASCRIPT CARDS
-const cardsByJavaScript = (language, uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
+const cardsByJavaScript = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="language"&equalTo="JavaScript"&uid="${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-      const jsLang = Object.values(data).filter((item) => item.language === 'JavaScript');
-      console.warn(jsLang);
-      if (data) {
-        resolve(jsLang);
-      } else {
-        resolve([]);
-      }
-    })
+    .then((data) => resolve(Object.values(data)))
     .catch(reject);
 });
 
