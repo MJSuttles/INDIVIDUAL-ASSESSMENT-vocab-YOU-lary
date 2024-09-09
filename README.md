@@ -18,7 +18,7 @@ Screenshots of your project: N/A
 
 List of contributors and links to their GH profiles:
 
-Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great):
+Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great): https://www.loom.com/share/671a9b186caa47beb98927a4f38efa5c
 
 [VIEW PROJECT INSTRUCTIONS](./PROJECT_INSTRUCTIONS.MD)
 
